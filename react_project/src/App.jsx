@@ -97,7 +97,7 @@ function App() {
     </select>
 
     <button onClick={() => setShowModal(false)}>
-      Tutup
+      Selesai
     </button>
   </div>
 )}
