@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="container">
       <h1>Data Siswa</h1>
-      <p>Card React Sederhana</p>
+      <p>Aplikasi olah Data Siswa Sederhana</p>
     </div>
   );
 }
@@ -36,14 +36,19 @@ function Biodata({ nama, nisn, kelas }) {
 function App() {
   const [showModal, setShowModal] = useState(false);
 
-  const siswa = [
+  const [siswa, setSiswa] = useState([
     { nama: "Rifa", nisn: "6767", kelas: "XI PPLG 2" },
     { nama: "Ezzar Poseidon", nisn: "1234", kelas: "XI PPLG 1" },
     { nama: "Wahyoe", nisn: "4321", kelas: "XI PPLG 6" },
     { nama: "Mas Boi", nisn: "7676", kelas: "XI PPLG 7" },
     { nama: "Ayip", nisn: "5678", kelas: "XI PPLG 2" },
-    
-  ];
+  ]);
+
+  const [form, setForm] = useState({
+    nama: "",
+    nisn: "",
+    kelas: "",
+  });
 
   return (
     <>
@@ -69,45 +74,58 @@ function App() {
         </div>
       </div>
 
-{showModal && (
-  <div className="modal">
-    <h3>Form Tambah</h3>
+      {showModal && (
+        <div className="modal">
+          <h3>Form Tambah</h3>
 
-    <input
-      type="text"
-      name="nama"
-      id="nama"
-      placeholder="Nama Murid"
-    />
+          <input
+            type="text"
+            name="nama"
+            placeholder="Nama Murid"
+            onChange={(e) =>
+              setForm({ ...form, nama: e.target.value })
+            }
+          />
 
-    <input
-      type="text"
-      name="nisn"
-      id="nisn"
-      placeholder="NISN"
-    />
+          <input
+            type="text"
+            name="nisn"
+            placeholder="NISN"
+            onChange={(e) =>
+              setForm({ ...form, nisn: e.target.value })
+            }
+          />
 
-    <select name="kelas" id="kelas">
-      <option value="X PPLG 1">X PPLG 1</option>
-      <option value="X PPLG 2">X PPLG 2</option>
-      <option value="X PPLG 3">X PPLG 3</option>
-      <option value="XI PPLG 1">XI PPLG 1</option>
-      <option value="XI PPLG 2">XI PPLG 2</option>
-      <option value="XI PPLG 3">XI PPLG 3</option>
-    </select>
+          <select
+            name="kelas"
+            onChange={(e) =>
+              setForm({ ...form, kelas: e.target.value })
+            }
+          >
+            <option value="">Pilih Kelas</option>
+            <option value="X PPLG 1">X PPLG 1</option>
+            <option value="X PPLG 2">X PPLG 2</option>
+            <option value="X PPLG 3">X PPLG 3</option>
+            <option value="XI PPLG 1">XI PPLG 1</option>
+            <option value="XI PPLG 2">XI PPLG 2</option>
+            <option value="XI PPLG 3">XI PPLG 3</option>
+          </select>
 
-    <button onClick={() => setShowModal(false)}>
-      Selesai
-    </button>
-  </div>
-)}
+          <button>Selesai</button>
 
+          <button onClick={() => setShowModal(false)}>
+            Batal
+          </button>
+        </div>
+      )}
 
       <footer style={{ textAlign: "center", marginTop: "30px" }}>
-        © 2026
+        © Siswa PPLG 2026
       </footer>
     </>
   );
 }
+
+console.log();
 
 export default App;

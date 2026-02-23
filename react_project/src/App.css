@@ -1,154 +1,177 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #111827; /* warna teks default */
+  background-color: #f5f5f5;
+  color: #111827;
 }
 
+/* Container */
 .container {
-    text-align: center;
-    padding: 40px;
+  text-align: center;
+  padding: 40px;
 }
 
 /* Judul */
 h1 {
-    margin-bottom: 20px;
-    padding-top: 30px;
-    color: #2061ec; /* biru */
+  margin-bottom: 10px;
+  padding-top: 30px;
+  color: #2061ec;
 }
 
-h3 {
-    margin-right: 150px;
-    color: #1f2937;
+p {
+  color: #4b5563;
 }
 
 /* Button tambah */
 .btn-add {
-    background-color: #1998ff;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 9px;
-    cursor: pointer;
-    margin-bottom: 30px;
+  background-color: #1998ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 9px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
+.btn-add:hover {
+  background-color: #1484db;
+}
+
+/* Card wrapper */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* Card */
-.card-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
 .card {
-    background-color: white;
-    width: 320px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-top: solid 7px #2061ec;
+  background-color: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: solid 7px #2061ec;
+  text-align: left;
 }
 
 /* Judul di card */
 .card h3 {
-    margin-bottom: 10px;
-    color: #1f2937;
+  margin-bottom: 10px;
+  color: #1f2937;
 }
 
-/* Text isi card */
+/* Isi card */
 .card p {
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #4b5563;
-    margin-right: 150px;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #4b5563;
 }
 
-/* Button wrapper */
+/* Button card */
 .card-btn {
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-/* Button edit */
 .btn-edit {
-    background-color: #10a51c;
-    color: white;
-    border: none;
-    padding: 7px 12px;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: #10a51c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Button hapus */
+.btn-edit:hover {
+  background-color: #0e8f18;
+}
+
 .btn-delete {
-    background-color: #8b1407;
-    color: white;
-    border: none;
-    padding: 7px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-right: 150px;
+  background-color: #b91c1c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-/* Modal backdrop */
+.btn-delete:hover {
+  background-color: #991b1b;
+}
+
 .modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 25px;
-    width: 320px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 25px;
+  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-/* Judul modal */
 .modal h3 {
-    margin-bottom: 15px;
-    color: #1f2937;
-    text-align: center;
+  margin-bottom: 15px;
+  color: #1f2937;
+  text-align: center;
 }
 
-/* Input & select */
 .modal input,
 .modal select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    border: 1px solid #d1d5db;
-    font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
 }
 
-/* Focus input */
 .modal input:focus,
 .modal select:focus {
-    outline: none;
-    border-color: #2061ec;
+  outline: none;
+  border-color: #2061ec;
 }
 
-/* Button modal */
 .modal button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2061ec;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
 }
 
-.modal button:hover {
-    background-color: #1a4fd8;
+.modal button:first-of-type {
+  background-color: #2061ec;
+  color: white;
+  margin-bottom: 14px; 
+}
+
+.modal button:first-of-type:hover {
+  background-color: #1a4fd8;
+}
+
+.modal button:last-of-type {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.modal button:last-of-type:hover {
+  background-color: #d1d5db;
+}
+
+footer {
+  color: #6b7280;
 }
